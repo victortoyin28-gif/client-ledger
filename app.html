@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#2563EB">
 <title>Client Ledger</title>
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest.jsonon">
 <script src="https://cdn.tailwindcss.com"></script>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -19,8 +19,10 @@ body { font-family: 'Inter', system-ui, sans-serif; background: #F9FAFB; }
 .input:focus { box-shadow: 0 0 0 2px #3B82F6; }
 </style>
 <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
+<link rel="stylesheet" href="style.css">
 </head>
-<body><div id="root"></div>
+<body>
+  <div id="app"></div><div id="root"></div>
 <script type="text/babel">
 const { useState, useEffect } = React;
 const DB = {
@@ -288,5 +290,6 @@ function Settings({user, onLogout}) {
 }
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 </script>
+<script src="script.js"></script>
 </body>
 </html>

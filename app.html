@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Ledger</title>
+    <meta name="description" content="Track clients, payments, and status in one place." />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Operations dashboard</p>
+          <h1>Client Ledger</h1>
+        </div>
+        <div class="summary" id="summaryCard">
+          <span>Total balance</span>
+          <strong id="totalBalance">$0.00</strong>
+        </div>
+      </header>
+
+      <main class="content-grid">
+        <section class="panel form-panel">
+          <h2 id="formTitle">Add Client</h2>
+
+          <form id="clientForm">
+            <input type="hidden" id="clientId" name="clientId" />
+
+            <label>
+              Client name
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </label>
+
+            <label>
+              Phone
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required />
+            </label>
+
+            <div class="inline-fields">
+              <label>
+                Status
+                <select id="status" name="status">
+                  <option value="active">Active</option>
+                  <option value="pending">Pending</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </label>
+
+              <label>
+                Balance
+                <input type="number" id="balance" name="balance" step="0.01" min="0" value="0" required />
+              </label>
+            </div>
+
+            <label>
+              Notes
+              <textarea id="notes" name="notes" rows="4" placeholder="Project details, follow-up notes, and outstanding items."></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="primary">Save client</button>
+              <button type="button" class="secondary" id="resetFormBtn">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel list-panel">
+          <div class="list-toolbar">
+            <h2>Client list</h2>
+            <input id="searchInput" type="search" placeholder="Search by name or email" aria-label="Search clients" />
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                  <th>Balance</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="clientTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

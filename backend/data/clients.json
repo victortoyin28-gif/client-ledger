@@ -1,0 +1,29 @@
+[
+  {
+    "id": "client-1",
+    "name": "Ava Thompson",
+    "email": "ava@example.com",
+    "phone": "(415) 555-0142",
+    "status": "active",
+    "balance": 2400,
+    "notes": "Website design retainer due next Friday."
+  },
+  {
+    "id": "client-2",
+    "name": "Liam Patel",
+    "email": "liam@example.com",
+    "phone": "(212) 555-0118",
+    "status": "pending",
+    "balance": 875,
+    "notes": "Awaiting final invoice approval."
+  },
+  {
+    "id": "client-3",
+    "name": "Noah Garcia",
+    "email": "noah@example.com",
+    "phone": "(310) 555-0195",
+    "status": "inactive",
+    "balance": 0,
+    "notes": "Previously engaged on a branding project."
+  }
+]

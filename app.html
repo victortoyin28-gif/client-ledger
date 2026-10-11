@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Client Ledger</title>
     <meta name="description" content="Track clients, payments, and status in one place." />
+    <meta name="theme-color" content="#2563eb" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="page-shell">
       <header class="topbar">
-        <div>
+        <div class="topbar-left">
           <p class="eyebrow">Operations dashboard</p>
           <h1>Client Ledger</h1>
         </div>
-        <div class="summary" id="summaryCard">
-          <span>Total balance</span>
-          <strong id="totalBalance">$0.00</strong>
+
+        <div class="topbar-right">
+          <button type="button" id="exportCsvBtn" class="secondary">Export CSV</button>
+          <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+          <div class="summary" id="summaryCard">
+            <span>Total balance</span>
+            <strong id="totalBalance">$0.00</strong>
+          </div>
         </div>
       </header>
 
